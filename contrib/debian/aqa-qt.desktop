@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Aqa
+Comment=Aqa P2P Cryptocurrency
+Comment[fr]=Aqa, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Aqa, eşten eşe kriptografik sanal para birimi
+Exec=aqa-qt %u
+Terminal=false
+Type=Application
+Icon=aqa128
+MimeType=x-scheme-handler/aqa;
+Categories=Office;Finance;

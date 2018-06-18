@@ -1,0 +1,26 @@
+# /etc/conf.d/aqad: config file for /etc/init.d/aqad
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/aqa/aqa.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/aqad"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/aqad.pid"
+
+# Where to write aqad data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/aqad"
+
+# User and group to own aqad process
+#BITCOIND_USER="aqa"
+#BITCOIND_GROUP="aqa"
+
+# Path to aqad executable
+#BITCOIND_BIN="/usr/bin/aqad"
+
+# Nice value to run aqad under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

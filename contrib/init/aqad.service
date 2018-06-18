@@ -1,0 +1,26 @@
+[Unit]
+Description=AQA's distributed currency daemon
+After=network.target
+
+[Service]
+User=aqa
+Group=aqa
+
+Type=forking
+PIDFile=/var/lib/aqad/aqad.pid
+
+ExecStart=/usr/bin/aqad -daemon -pid=/var/lib/aqad/aqad.pid \
+          -conf=/etc/aqa/aqa.conf -datadir=/var/lib/aqad
+
+ExecStop=-/usr/bin/aqa-cli -conf=/etc/aqa/aqa.conf \
+         -datadir=/var/lib/aqad stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
